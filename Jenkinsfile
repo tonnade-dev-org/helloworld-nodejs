@@ -15,5 +15,15 @@ pipeline {
         } // container
       } // steps
     } // stage
+    // CONDITIONAL STAGE
+    stage('Build and Push Image') {
+      when {
+         beforeAgent true
+         branch 'master'
+      }
+      steps {
+         echo "TODO - build and push image"
+      } // steps
+    } // stage    
   } // stages
 } // pipeline
