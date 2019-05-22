@@ -7,6 +7,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
+        checkout scm
         sh 'java -version'
         container('nodejs') {
           echo 'Hello World!'   
